@@ -1,0 +1,119 @@
+#body-modal {
+	text-align: center;
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	margin: 0;
+}
+
+
+.modal {
+	width: 100%;
+	height: 100vh;
+	background: #00000073;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	
+	animation: modal 2s 12s forwards;
+	visibility: hidden;
+	opacity: 0;
+	    z-index: 1000000;
+}
+.modal-contenido {
+	margin: auto;
+	width: 40%;
+	/*height: 40%;*/
+	background: white;
+	border-radius: 10px;
+	    z-index: 10000;
+}
+
+#cerrar {
+	display: none;
+}
+#cerrar + label {
+	position: relative;
+    color: #fff;
+    font-size: 22px;
+    z-index: 10000;
+    right: 10px;
+    cursor: pointer;
+    animation: modal 2s 5s forwards;
+    opacity: 1;
+	float: right;
+    margin-top: 15px;
+}
+
+
+.modal-header {
+	background: #28790e;
+    border-radius: 10px 10px 0px 0px;
+	padding: 10px 20px;
+	/*vertical-align: middle;*/
+	height: 60px;
+
+}
+.modal-header img{
+	/*left: 0px;^*/
+	
+	float: left;
+    margin-left: 20px;
+    margin-top: 18px;
+    margin-right: 10px;
+	
+}
+.texto-whatsapp {
+	color: #fff;
+	font-size: 18px;
+	float: left;
+	margin-top: 18px;
+}
+.contenido {
+	padding: 20px 20px 10px 20px;
+}
+
+.contenido h6 {
+	font-size: 25px;
+    display: inline;
+	line-height: 100%;
+}
+
+
+.btn-whatsapp {
+	margin: 0px;
+}
+
+
+.btn-abrir-whatsapp {
+	background-image: url(../images/botonverdeentrarmanito.png);
+    padding: 40px 90px;
+    background-repeat: no-repeat;
+    margin: 10px;
+    /* height: 90px; */
+    display: inline-block;
+}
+.btn-abrir-whatsapp:hover {
+	background-image: url( ../images/botonazulentrarmanito.png);
+    background-repeat: no-repeat;
+
+}
+
+
+@keyframes modal{
+	100% {
+		
+		visibility: visible;
+		opacity: 1;
+	}
+	
+	
+} 
+
+@media only screen and (max-width: 600px) {
+	
+	.modal-contenido {
+    width: 90%;
+
+}
+
+}
